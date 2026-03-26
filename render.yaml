@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: deerflow
+    runtime: docker
+    dockerfilePath: ./Dockerfile
+    envVars:
+      - key: PORT
+        value: 2026
+    disk:
+      name: user-data
+      mountPath: /mnt/user-data
+      sizeGB: 10
